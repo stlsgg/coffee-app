@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" href="/coffee-beans.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/src/css/main.css">
+  <script src="/src/js/main.js" defer></script>
   <title>Coffee time!</title>
 </head>
 
@@ -23,7 +24,7 @@
     </div>
 
     <div class="action">
-      <button type="button">Coffee up!</button>
+      <button type="button" id="coffee-btn">Coffee up!</button>
     </div>
 
     <!-- <div class="ideas">
@@ -41,8 +42,8 @@
     <div class="statistics">
       <h2>Stats:</h2>
       <ul>
-        <li>Today’s cups</li>
-        <li>Last coffee at</li>
+        <li>Today’s cups: <span id="today-cups"></span></li>
+        <li>Last coffee at <span id="last-dranked"></span></li>
         <li>Avg. cups/hour</li>
       </ul>
     </div>
