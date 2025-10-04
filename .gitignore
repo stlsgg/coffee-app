@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# CSS for development reasons (track scss files instead)
+*.css
+*.css.map
