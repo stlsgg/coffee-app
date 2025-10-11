@@ -1,4 +1,5 @@
-export const updateState = (targetElement, newState) => {
-  targetElement.innerText = newState;
-  return;
+// update state to an object
+export const updateState = (object, newState) => {
+  object = { ...object, ...newState };
+  return object;
 };
