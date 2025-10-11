@@ -1,12 +1,9 @@
+import { updateState } from "./utils/updateState";
+
 const coffeeBtn = document.getElementById("coffee-btn");
 const cups = document.getElementById("today-cups");
 const lastCup = document.getElementById("last-dranked");
 let counter = 0;
-
-const updateState = (targetElement, newState) => {
-  targetElement.innerText = newState;
-  return;
-};
 
 updateState(cups, counter);
 
