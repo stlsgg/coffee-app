@@ -12,9 +12,11 @@ renderState(cups, state.cups);
 renderState(lastCup, state.lastDrink);
 
 coffeeBtn.addEventListener("click", () => {
-  state = updateState(state, { cups: state.cups + 1 });
-  renderState(cups, state.cups);
+  state = updateState(state, {
+    cups: state.cups + 1,
+    lastDrink: getCurrentTime(),
+  });
 
-  state = updateState(state, { lastDrink: getCurrentTime() });
+  renderState(cups, state.cups);
   renderState(lastCup, state.lastDrink);
 });
