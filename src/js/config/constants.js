@@ -12,13 +12,15 @@ export const PHRASES = [
 
 export const DOM_IDS = {
   button: "coffee-btn",
-  cups: "today-cups",
+  todayCups: "today-cups",
   lastCup: "last-dranked",
+  totalCups: "total-cups",
 };
 
 export const INITIAL_STATE = {
   buttonName: PHRASES[randomInt(0, PHRASES.length - 1)],
-  cups: 0,
+  todayCups: 0,
+  totalCups: 0,
   lastDrink: "never",
 };
 

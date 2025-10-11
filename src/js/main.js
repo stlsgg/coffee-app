@@ -6,17 +6,20 @@ import { loadState, saveState } from "./utils/storage.js";
 let state = loadState() || INITIAL_STATE;
 
 const coffeeBtn = document.getElementById(DOM_IDS.button);
-const cups = document.getElementById(DOM_IDS.cups);
+const cups = document.getElementById(DOM_IDS.todayCups);
 const lastCup = document.getElementById(DOM_IDS.lastCup);
+const totalCups = document.getElementById(DOM_IDS.totalCups);
 
-renderState(cups, state.cups);
+renderState(cups, state.todayCups);
 renderState(lastCup, state.lastDrink);
 renderState(coffeeBtn, state.buttonName);
+renderState(totalCups, state.totalCups);
 
 coffeeBtn.addEventListener("click", () => {
   state = updateState(state, {
     buttonName: PHRASES[randomInt(0, PHRASES.length - 1)],
-    cups: state.cups + 1,
+    todayCups: state.todayCups + 1,
+    totalCups: state.totalCups + 1,
     lastDrink: getCurrentTime(),
   });
 
@@ -25,4 +28,5 @@ coffeeBtn.addEventListener("click", () => {
   renderState(cups, state.todayCups);
   renderState(lastCup, state.lastDrink);
   renderState(coffeeBtn, state.buttonName);
+  renderState(totalCups, state.totalCups);
 });
