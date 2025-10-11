@@ -3,6 +3,11 @@ const cups = document.getElementById("today-cups");
 const lastCup = document.getElementById("last-dranked");
 let counter = 0;
 
+const updateState = (targetElement, newState) => {
+  targetElement.innerText = newState;
+  return;
+};
+
 cups.innerText = counter;
 
 coffeeBtn.addEventListener("click", () => {
