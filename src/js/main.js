@@ -8,13 +8,12 @@ const updateState = (targetElement, newState) => {
   return;
 };
 
-cups.innerText = counter;
+updateState(cups, counter);
 
 coffeeBtn.addEventListener("click", () => {
 	const now = new Date();
 
-	++counter;
-	cups.innerText = counter;
+  updateState(cups, ++counter);
 
 	const time = now.toLocaleTimeString("en-US", {
 		hour: "2-digit",
@@ -22,5 +21,5 @@ coffeeBtn.addEventListener("click", () => {
 		hour12: false,
 	});
 
-	lastCup.innerText = time;
+  updateState(lastCup, time);
 });
