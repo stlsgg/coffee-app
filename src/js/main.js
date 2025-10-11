@@ -1,6 +1,5 @@
-import { updateState } from "./utils/updateState";
+import { updateState, getCurrentTime } from "./utils/index.js";
 import { renderState } from "./ui/renderState";
-import { getCurrentTime } from "./utils/getCurrentTime";
 
 let state = {
   cups: 0,
