@@ -2,7 +2,10 @@ import { updateState } from "./utils/updateState";
 import { renderState } from "./ui/renderState";
 import { getCurrentTime } from "./utils/getCurrentTime";
 
-let state = { cups: 0, lastDrink: "never" };
+let state = {
+  cups: 0,
+  lastDrink: "never",
+};
 
 const coffeeBtn = document.getElementById("coffee-btn");
 const cups = document.getElementById("today-cups");
