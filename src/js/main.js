@@ -1,8 +1,9 @@
 import { updateState, getCurrentTime, randomInt } from "./utils/index.js";
 import { renderState } from "./ui/renderState";
 import { PHRASES, DOM_IDS, INITIAL_STATE } from "./config/constants.js";
+import { loadState, saveState } from "./utils/storage.js";
 
-let state = INITIAL_STATE;
+let state = loadState() || INITIAL_STATE;
 
 const coffeeBtn = document.getElementById(DOM_IDS.button);
 const cups = document.getElementById(DOM_IDS.cups);
@@ -19,7 +20,9 @@ coffeeBtn.addEventListener("click", () => {
     lastDrink: getCurrentTime(),
   });
 
-  renderState(cups, state.cups);
+  saveState(state);
+
+  renderState(cups, state.todayCups);
   renderState(lastCup, state.lastDrink);
   renderState(coffeeBtn, state.buttonName);
 });

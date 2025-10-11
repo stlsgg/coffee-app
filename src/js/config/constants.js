@@ -21,3 +21,5 @@ export const INITIAL_STATE = {
   cups: 0,
   lastDrink: "never",
 };
+
+export const LOCAL_STORAGE_KEY = "coffeeApp";
