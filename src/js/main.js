@@ -1,24 +1,12 @@
 import { updateState, getCurrentTime, randomInt } from "./utils/index.js";
 import { renderState } from "./ui/renderState";
+import { PHRASES, DOM_IDS, INITIAL_STATE } from "./config/constants.js";
 
-const phrases = [
-  "Cheer up!",
-  "Drink strong coffee!",
-  "Turn on!",
-  "Coffee up!",
-  "Raise adrenaline!",
-  "Squeeze out the grains!",
-];
+let state = INITIAL_STATE;
 
-let state = {
-  buttonName: phrases[randomInt(0, phrases.length - 1)],
-  cups: 0,
-  lastDrink: "never",
-};
-
-const coffeeBtn = document.getElementById("coffee-btn");
-const cups = document.getElementById("today-cups");
-const lastCup = document.getElementById("last-dranked");
+const coffeeBtn = document.getElementById(DOM_IDS.button);
+const cups = document.getElementById(DOM_IDS.cups);
+const lastCup = document.getElementById(DOM_IDS.lastCup);
 
 renderState(cups, state.cups);
 renderState(lastCup, state.lastDrink);
@@ -26,7 +14,7 @@ renderState(coffeeBtn, state.buttonName);
 
 coffeeBtn.addEventListener("click", () => {
   state = updateState(state, {
-    buttonName: phrases[randomInt(0, phrases.length - 1)],
+    buttonName: PHRASES[randomInt(0, PHRASES.length - 1)],
     cups: state.cups + 1,
     lastDrink: getCurrentTime(),
   });
