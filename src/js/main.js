@@ -12,7 +12,7 @@ const totalCupsElement = document.getElementById(DOM_IDS.totalCups);
 
 renderState(todayCupsElement, coffeeState.todayCups);
 renderState(lastCupElement, coffeeState.lastDrink);
-renderState(coffeeBtn, coffeeState.buttonName);
+renderState(coffeeBtn, coffeeState.buttonText);
 renderState(totalCupsElement, coffeeState.totalCups);
 
 coffeeBtn.addEventListener("click", () => {
@@ -27,6 +27,6 @@ coffeeBtn.addEventListener("click", () => {
 
   renderState(todayCupsElement, coffeeState.todayCups);
   renderState(lastCupElement, coffeeState.lastDrink);
-  renderState(coffeeBtn, coffeeState.buttonName);
+  renderState(coffeeBtn, coffeeState.buttonText);
   renderState(totalCupsElement, coffeeState.totalCups);
 });
