@@ -9,6 +9,7 @@ const coffeeBtn = document.getElementById(DOM_IDS.button);
 const todayCupsElement = document.getElementById(DOM_IDS.todayCups);
 const lastCupElement = document.getElementById(DOM_IDS.lastCup);
 const totalCupsElement = document.getElementById(DOM_IDS.totalCups);
+const clearDataBtn = document.getElementById(DOM_IDS.clearData);
 
 renderState(todayCupsElement, coffeeState.todayCups);
 renderState(lastCupElement, coffeeState.lastDrink);
@@ -30,3 +31,7 @@ coffeeBtn.addEventListener("click", () => {
   renderState(coffeeBtn, coffeeState.buttonName);
   renderState(totalCupsElement, coffeeState.totalCups);
 });
+
+clearDataBtn.addEventListener("click", () => {
+  console.log("foo");
+})
