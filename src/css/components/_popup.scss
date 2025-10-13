@@ -1,0 +1,22 @@
+.popup-window {
+  display: none;
+
+  position: fixed;
+  z-index: 11;
+  width: 75%;
+  height: 35%;
+  max-width: 500px;
+  max-height: 330px;
+  border-radius: 3px;
+  background-color: $background;
+  border-color: $primary;
+  border: thin solid;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &--active {
+    display: block;
+
+    @extend .popup-window;
+  }
+}
