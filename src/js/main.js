@@ -6,14 +6,14 @@ import { loadState, saveState } from "./utils/storage.js";
 let coffeeState = loadState() || INITIAL_STATE;
 
 const coffeeBtn = document.getElementById(DOM_IDS.button);
-const cups = document.getElementById(DOM_IDS.todayCups);
-const lastCup = document.getElementById(DOM_IDS.lastCup);
-const totalCups = document.getElementById(DOM_IDS.totalCups);
+const todayCupsElement = document.getElementById(DOM_IDS.todayCups);
+const lastCupElement = document.getElementById(DOM_IDS.lastCup);
+const totalCupsElement = document.getElementById(DOM_IDS.totalCups);
 
-renderState(cups, coffeeState.todayCups);
-renderState(lastCup, coffeeState.lastDrink);
+renderState(todayCupsElement, coffeeState.todayCups);
+renderState(lastCupElement, coffeeState.lastDrink);
 renderState(coffeeBtn, coffeeState.buttonName);
-renderState(totalCups, coffeeState.totalCups);
+renderState(totalCupsElement, coffeeState.totalCups);
 
 coffeeBtn.addEventListener("click", () => {
   coffeeState = updateState(coffeeState, {
@@ -25,8 +25,8 @@ coffeeBtn.addEventListener("click", () => {
 
   saveState(coffeeState);
 
-  renderState(cups, coffeeState.todayCups);
-  renderState(lastCup, coffeeState.lastDrink);
+  renderState(todayCupsElement, coffeeState.todayCups);
+  renderState(lastCupElement, coffeeState.lastDrink);
   renderState(coffeeBtn, coffeeState.buttonName);
-  renderState(totalCups, coffeeState.totalCups);
+  renderState(totalCupsElement, coffeeState.totalCups);
 });
