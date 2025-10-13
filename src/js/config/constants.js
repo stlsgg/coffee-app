@@ -18,7 +18,7 @@ export const DOM_IDS = {
 };
 
 export const INITIAL_STATE = {
-  buttonName: PHRASES[randomInt(0, PHRASES.length - 1)],
+  buttonText: PHRASES[randomInt(0, PHRASES.length - 1)],
   todayCups: 0,
   totalCups: 0,
   lastDrink: "never",

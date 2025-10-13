@@ -17,7 +17,7 @@ renderState(totalCupsElement, coffeeState.totalCups);
 
 coffeeBtn.addEventListener("click", () => {
   coffeeState = updateState(coffeeState, {
-    buttonName: PHRASES[randomInt(0, PHRASES.length - 1)],
+    buttonText: PHRASES[randomInt(0, PHRASES.length - 1)],
     todayCups: coffeeState.todayCups + 1,
     totalCups: coffeeState.totalCups + 1,
     lastDrink: getCurrentTime(),
