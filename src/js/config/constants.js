@@ -15,7 +15,9 @@ export const DOM_IDS = {
   todayCups: "today-cups",
   lastCup: "last-dranked",
   totalCups: "total-cups",
-  clearData: "clear-data"
+  clearData: "clear-data",
+  overlay: "overlay",
+  popupWindow: "popup-window"
 };
 
 export const INITIAL_STATE = {

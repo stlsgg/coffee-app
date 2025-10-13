@@ -10,6 +10,8 @@ const todayCupsElement = document.getElementById(DOM_IDS.todayCups);
 const lastCupElement = document.getElementById(DOM_IDS.lastCup);
 const totalCupsElement = document.getElementById(DOM_IDS.totalCups);
 const clearDataBtn = document.getElementById(DOM_IDS.clearData);
+const overlayElement = document.getElementById(DOM_IDS.overlay);
+const popupWindowElement = document.getElementById(DOM_IDS.popupWindow);
 
 renderState(todayCupsElement, coffeeState.todayCups);
 renderState(lastCupElement, coffeeState.lastDrink);
@@ -33,5 +35,6 @@ coffeeBtn.addEventListener("click", () => {
 });
 
 clearDataBtn.addEventListener("click", () => {
-  console.log("foo");
+  overlayElement.classList.toggle("overlay--active");
+  popupWindowElement.classList.toggle("popup-window--active");
 })
