@@ -1,45 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/coffee-beans.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/main.css" />
+    <script src="/src/js/main.js" type="module"></script>
+    <title>Coffee time!</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/coffee-beans.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/src/css/main.css">
-  <script src="/src/js/main.js" type="module"></script>
-  <title>Coffee time!</title>
-</head>
-
-<body>
+  <body>
     <div class="overlay"></div>
 
-  <div class="container">
-    <div class="intro">
-      <div class="intro__img">
-        <img src="/coffee-cup.png" alt="Coffee cup" class="img">
+    <div class="container">
+      <div class="intro">
+        <div class="intro__img">
+          <img src="/coffee-cup.png" alt="Coffee cup" class="img" />
+        </div>
+
+        <div class="intro__title">
+          <h1 class="display-lg">Coffee time!</h1>
+        </div>
       </div>
 
-      <div class="intro__title">
-        <h1 class="display-lg">Coffee time!</h1>
-      </div>
-    </div>
-
+      <div class="action">
+        <button type="button" id="coffee-btn">Coffee up!</button>
     <div class="action">
       <button type="button" id="coffee-btn">Coffee up!</button>
     </div>
+      </div>
 
-    <div class="statistics">
-      <h2>Stats:</h2>
-      <ul>
-        <li>Today’s cups: <span id="today-cups"></span></li>
-        <li>Last coffee at <span id="last-dranked"></span></li>
-        <li>Total cups: <span id="total-cups"></span></li>
-      </ul>
-    </div>
+      <div class="statistics">
+        <h2>Stats:</h2>
+        <ul>
+          <li>Today’s cups: <span id="today-cups"></span></li>
+          <li>Last coffee at <span id="last-dranked"></span></li>
+          <li>Total cups: <span id="total-cups"></span></li>
+        </ul>
+      </div>
 
       <div class="popup-window"></div>
-  </div>
-
-</body>
-
+    </div>
+  </body>
 </html>
